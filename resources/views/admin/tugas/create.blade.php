@@ -45,19 +45,24 @@
                             </div>
                             <div class="card-body card-block">
                                 <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                    <div class="row form-group">
+                                    <!-- <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label class=" form-control-label">Static</label>
                                         </div>
                                         <div class="col-12 col-md-9">
                                             <p class="form-control-static">Username</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Text Input</label></div>
-                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
+                                        <div class="col col-md-3">
+                                            <label for="text-input" class=" form-control-label">Nama Tugas</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                            <small class="form-text text-muted">This is a help text</small>
+                                        </div>
                                     </div>
-                                    <div class="row form-group">
+                                    <!-- <div class="row form-group">
                                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email Input</label></div>
                                         <div class="col-12 col-md-9"><input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control"><small class="help-block form-text">Please enter your email</small></div>
                                     </div>
@@ -72,10 +77,10 @@
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Textarea</label></div>
                                         <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea></div>
-                                    </div>
+                                    </div> -->
                                     <div class="row form-group">
                                         <div class="col col-md-3">
-                                            <label for="select" class=" form-control-label">Select</label>
+                                            <label for="select" class=" form-control-label">Kategori Tugas</label>
                                         </div>
                                         <div class="col-12 col-md-9">
                                             <select name="select" id="select" class="form-control">
@@ -87,6 +92,16 @@
                                         </div>
                                     </div>
                                     <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="text-input" class=" form-control-label">Keterangan Tugas</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                            <small class="form-text text-muted">This is a help text</small>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="row form-group">
                                         <div class="col col-md-3"><label for="selectLg" class=" form-control-label">Select Large</label></div>
                                         <div class="col-12 col-md-9">
                                             <select name="selectLg" id="selectLg" class="form-control-lg form-control">
@@ -139,8 +154,9 @@
                                                 <option value="10">Option #10</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="row form-group">
+                                    </div> -->
+
+                                    <!-- <div class="row form-group">
                                         <div class="col col-md-3"><label class=" form-control-label">Radios</label></div>
                                         <div class="col col-md-9">
                                             <div class="form-check">
@@ -161,9 +177,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
                                     <div class="row form-group">
-                                        <div class="col col-md-3"><label class=" form-control-label">Inline Radios</label></div>
+                                        <div class="col col-md-3"><label class=" form-control-label">Status Tugas</label></div>
                                         <div class="col col-md-9">
                                             <div class="form-check-inline form-check">
                                                 <label for="inline-radio1" class="form-check-label ">
@@ -178,7 +195,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row form-group">
+
+                                    <!-- <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label class=" form-control-label">Checkboxes</label>
                                         </div>
@@ -231,17 +249,18 @@
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="file-multiple-input" class=" form-control-label">Multiple File input</label></div>
                                         <div class="col-12 col-md-9"><input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file"></div>
-                                    </div>
+                                    </div> -->
+
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Reset
+                                    </button>
+
                                 </form>
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-dot-circle-o"></i> Submit
-                                </button>
-                                <button type="reset" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-ban"></i> Reset
-                                </button>
-                            </div>
+                            
                         </div>
 
 
