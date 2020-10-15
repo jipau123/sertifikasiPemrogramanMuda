@@ -63,6 +63,8 @@
                                             <th>Kategori</th>
                                             <th>Keterangan</th>
                                             <th>Status</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -74,6 +76,17 @@
                                             <td>{{$row->id_kategori}}</td>
                                             <td>{{$row->ket_tugas}}</td>
                                             <td>{{$row->status_tugas}}</td>
+                                            <td>
+                                                <a href="{{route('tugas.edit',$row->id)}}" class="btn btn-primary">Edit</a>
+                                            </td>
+                                            <td>
+                                                <form action="{{route('tugas.destroy',$row->id)}}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger" type="submit">Hapus</button>
+                                                </form>
+                                                <!-- <a href="#" class="btn btn-danger">Hapus</a> -->
+                                            </td>
                                         </tr>
                                         @endforeach()
                                     </tbody>
