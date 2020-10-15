@@ -40,11 +40,26 @@
 
                     <div class="col-lg-12">
                         <div class="card">
+
                             <div class="card-header">
-                                <strong>Basic Form</strong> Elements
+                                <strong>{{$pagename}}</strong>
                             </div>
                             <div class="card-body card-block">
-                                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+                            @if($errors->any())
+                                <div class="alert alert-danger">
+                                    <div class="list-group">
+                                        @foreach($errors->all() as $error)
+                                        <li class="list-group-item">
+                                            {{$error}}
+                                        </li>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
+
+                                <form action="{{route('tugas.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                    @csrf
                                     <!-- <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label class=" form-control-label">Static</label>
@@ -58,7 +73,7 @@
                                             <label for="text-input" class=" form-control-label">Nama Tugas</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                            <input type="text" id="text-input" name="txtnama_tugas" placeholder="Text" class="form-control">
                                             <small class="form-text text-muted">This is a help text</small>
                                         </div>
                                     </div>
@@ -83,11 +98,22 @@
                                             <label for="select" class=" form-control-label">Kategori Tugas</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <select name="select" id="select" class="form-control">
-                                                <option value="0">Please select</option>
+                                            <select name="optionid_kategori" id="select" class="form-control">
+
+                                                <option value="0">-- Please select --</option>
+
+                                                @foreach($data_kategori as $kategori)
+
+                                                <option value={{$kategori->id}}>
+                                                    {{$kategori->nama_kategori}}
+                                                </option>
+
+                                                @endforeach
+
+                                                <!-- <option value="0">Please select</option>
                                                 <option value="1">Option #1</option>
                                                 <option value="2">Option #2</option>
-                                                <option value="3">Option #3</option>
+                                                <option value="3">Option #3</option> -->
                                             </select>
                                         </div>
                                     </div>
@@ -96,7 +122,7 @@
                                             <label for="text-input" class=" form-control-label">Keterangan Tugas</label>
                                         </div>
                                         <div class="col-12 col-md-9">
-                                            <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                            <input type="text" id="text-input" name="txtketerangan_tugas" placeholder="Text" class="form-control">
                                             <small class="form-text text-muted">This is a help text</small>
                                         </div>
                                     </div>
@@ -184,13 +210,12 @@
                                         <div class="col col-md-9">
                                             <div class="form-check-inline form-check">
                                                 <label for="inline-radio1" class="form-check-label ">
-                                                    <input type="radio" id="inline-radio1" name="inline-radios" value="option1" class="form-check-input">One
+                                                    <input type="radio" id="inline-radio1" name="radiostatus_tugas" value="0" class="form-check-input">
+                                                    Masih Berjalan
                                                 </label>
                                                 <label for="inline-radio2" class="form-check-label ">
-                                                    <input type="radio" id="inline-radio2" name="inline-radios" value="option2" class="form-check-input">Two
-                                                </label>
-                                                <label for="inline-radio3" class="form-check-label ">
-                                                    <input type="radio" id="inline-radio3" name="inline-radios" value="option3" class="form-check-input">Three
+                                                    <input type="radio" id="inline-radio2" name="radiostatus_tugas" value="1" class="form-check-input">
+                                                    Selesai
                                                 </label>
                                             </div>
                                         </div>
@@ -252,7 +277,7 @@
                                     </div> -->
 
                                     <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Submit
+                                        <i class="fa fa-dot-circle-o"></i> Simpan
                                     </button>
                                     <button type="reset" class="btn btn-danger btn-sm">
                                         <i class="fa fa-ban"></i> Reset
