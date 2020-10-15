@@ -91,4 +91,4 @@
     <script src="{{asset('public/admin/vendors/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
     <script src="{{asset('public/admin/assets/js/init-scripts/data-table/datatables-init.js')}}"></script>
 
-@endsection('content')
+@endsection
