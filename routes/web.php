@@ -28,4 +28,5 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     Route::resource('/tugas', 'Admin\TugasController');
     Route::resource('/mahasiswa', 'Admin\MahasiswaController');
     Route::resource('/prodi', 'Admin\ProdiController');
+    Route::resource('/kendaraan', 'Admin\KendaraanController');
 });

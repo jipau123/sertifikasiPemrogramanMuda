@@ -11,13 +11,16 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <form class="form-inline">
+                    <li class="active" style="font-family:verdana;">
                         <a href="{{url('/admin')}}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                         <a href="{{url('/admin/kategori')}}"> <i class="menu-icon fa fa-dashboard"></i>Kategori </a>
                         <a href="{{url('/admin/tugas')}}"> <i class="menu-icon fa fa-dashboard"></i>Tugas </a>
                         <a href="{{url('/admin/prodi')}}"> <i class="menu-icon fa fa-dashboard"></i>Program Studi</a>
                         <a href="{{url('/admin/mahasiswa')}}"> <i class="menu-icon fa fa-dashboard"></i>Mahasiswa </a>
+                        <a href="{{url('/admin/kendaraan')}}"> <i class="menu-icon fa fa-dashboard"></i>Moch. Aji Fauzan Iqbal </a>
                     </li>
+                    </form>
                     <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
